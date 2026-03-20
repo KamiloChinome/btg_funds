@@ -56,6 +56,7 @@ class ConfirmationBottomSheet extends StatelessWidget {
   }) {
     return showModalBottomSheet<void>(
       context: context,
+      showDragHandle: true,
       builder: (_) => ConfirmationBottomSheet(
         icon: icon,
         iconColor: iconColor,
@@ -76,21 +77,10 @@ class ConfirmationBottomSheet extends StatelessWidget {
 
     return SafeArea(
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(24, 24, 24, 24),
+        padding: const EdgeInsets.fromLTRB(24, 0, 24, 24),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            // Drag handle
-            Container(
-              width: 40,
-              height: 4,
-              decoration: BoxDecoration(
-                color: theme.colorScheme.onSurface.withValues(alpha: 0.2),
-                borderRadius: BorderRadius.circular(2),
-              ),
-            ),
-            const SizedBox(height: 24),
-
             // Icon
             Container(
               width: 64,

@@ -2,6 +2,18 @@
 
 Flutter mobile application for managing FPV/FIC investment funds. Allows users to subscribe to funds, cancel subscriptions, and view transaction history.
 
+## 🎬 Video Demo
+
+<div align="center">
+
+[![Ver Video Demo](https://img.shields.io/badge/%E2%96%B6%EF%B8%8F_Ver_Demo_en_Video-FF0000?style=for-the-badge&logo=google-drive&logoColor=white&labelColor=333333)](https://drive.google.com/file/d/18PfIIP_pyM2zPSKR66P4-1Ke2R6SHiKo/view?usp=sharing)
+
+> **📱 Mira la app en acción** — Navegación, suscripción a fondos, cancelación, historial de transacciones, modo oscuro e idiomas.
+
+</div>
+
+---
+
 ## Features
 
 - **Portfolio Overview** — Animated balance card, investment summary, and active subscriptions
