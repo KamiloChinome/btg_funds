@@ -4,12 +4,15 @@ Flutter mobile application for managing FPV/FIC investment funds. Allows users t
 
 ## Features
 
-- **Portfolio Overview** — View available balance and active subscriptions
-- **Fund Browsing** — Browse 5 available FPV/FIC funds with category badges
-- **Subscribe to Funds** — Subscribe with amount validation and notification method selection (Email/SMS)
-- **Cancel Subscriptions** — Cancel with confirmation dialog and automatic balance refund
-- **Transaction History** — Complete record of all subscriptions and cancellations
-- **Error Handling** — Clear error messages for insufficient balance, minimum amount violations, and duplicate subscriptions
+- **Portfolio Overview** — Animated balance card, investment summary, and active subscriptions
+- **Fund Browsing** — Browse 5 FPV/FIC funds with category filter chips (All / FPV / FIC) and pull-to-refresh
+- **Subscribe to Funds** — Bottom sheet form with COP currency formatting, amount validation, and notification method selection (Email/SMS)
+- **Cancel Subscriptions** — Confirmation bottom sheet with automatic balance refund
+- **Transaction History** — Timeline of all subscriptions and cancellations with type indicators
+- **Dark Mode** — Toggle between light and dark themes, persisted via SharedPreferences
+- **Localization (i18n)** — Full English and Spanish support with runtime language switching (easy_localization)
+- **Shimmer Loading** — Skeleton placeholders while funds load from the mock API
+- **Error Handling** — Sealed `Failure` union type with localized messages for insufficient balance, minimum amount violations, and duplicate subscriptions
 
 ## Architecture
 
@@ -30,11 +33,17 @@ lib/
 │   ├── domain/             # Subscription model, PortfolioState
 │   ├── presentation/       # PortfolioScreen, SubscriptionCard
 │   └── shared/             # Module providers
-└── transactions/           # Transaction history module
-    ├── application/        # TransactionsNotifier
-    ├── domain/             # FundTransaction model, TransactionType enum
-    ├── infrastructure/     # FundTransactionDTO
-    ├── presentation/       # TransactionsScreen, TransactionTile
+├── transactions/           # Transaction history module
+│   ├── application/        # TransactionsNotifier
+│   ├── domain/             # FundTransaction model, TransactionType enum
+│   ├── infrastructure/     # FundTransactionDTO
+│   ├── presentation/       # TransactionsScreen, TransactionTile
+│   └── shared/             # Module providers
+└── preferences/            # User preferences module
+    ├── application/        # AppPreferencesNotifier, state
+    ├── domain/             # AppPreferences model
+    ├── infrastructure/     # SharedPreferences repository
+    ├── presentation/       # SettingsScreen (theme toggle, language picker)
     └── shared/             # Module providers
 ```
 
@@ -48,6 +57,8 @@ lib/
 | Data Transfer | DTO layer with `json_serializable` (JSON to Domain) |
 | Navigation | GoRouter with ShellRoute for bottom navigation |
 | Forms | `flutter_form_builder` with `FormBuilderValidators` |
+| Localization | `easy_localization` with JSON translation files (EN/ES) |
+| Persistence | `shared_preferences` for theme and language settings |
 | Mock API | Repository pattern with simulated network delay |
 
 ## Prerequisites
@@ -83,6 +94,18 @@ flutter analyze
 | 3 | DEUDAPRIVADA | COP $50.000 | FIC |
 | 4 | FDO-ACCIONES | COP $250.000 | FIC |
 | 5 | FPV_BTG_PACTUAL_DINAMICA | COP $100.000 | FPV |
+
+## Testing
+
+```bash
+flutter test
+```
+
+| Suite | Covers |
+|---|---|
+| `portfolio_notifier_test` | Subscribe/cancel logic, balance updates, business rule validation, transaction recording |
+| `fund_repository_test` | Mock API fetch, DTO-to-domain mapping, error handling |
+| `fund_dto_test` | JSON deserialization, domain conversion, category mapping |
 
 ## Assumptions
 
