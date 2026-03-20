@@ -1,5 +1,4 @@
 import 'package:btg_funds/core/domain/failure.dart';
-import 'package:btg_funds/core/domain/typedefs.dart';
 import 'package:btg_funds/funds/domain/fund.dart';
 import 'package:btg_funds/funds/infrastructure/fund_dto.dart';
 import 'package:dartz/dartz.dart';
@@ -47,7 +46,7 @@ class FundRepository {
 
   /// Fetches all available funds from the simulated API.
   /// Returns [Either] a [Failure] or a list of [Fund] domain entities.
-  FutureEither<List<Fund>> fetchAll() async {
+  Future<Either<Failure, List<Fund>>> fetchAll() async {
     try {
       // Simulate network latency
       await Future.delayed(_apiDelay);
@@ -68,7 +67,7 @@ class FundRepository {
 
   /// Fetches a single fund by its [id].
   /// Returns [Either] a [Failure] or the [Fund] domain entity.
-  FutureEither<Fund> fetchById(String id) async {
+  Future<Either<Failure, Fund>> fetchById(String id) async {
     try {
       await Future.delayed(const Duration(milliseconds: 300));
 
