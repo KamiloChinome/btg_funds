@@ -1,0 +1,102 @@
+{
+  "appTitle": "BTG Pactual Funds",
+  "nav": {
+    "portfolio": "Portfolio",
+    "funds": "Funds",
+    "transactions": "Transactions",
+    "settings": "Settings"
+  },
+  "portfolio": {
+    "availableBalance": "Available Balance",
+    "mySubscriptions": "My Subscriptions",
+    "activeCount": "{count} active",
+    "noSubscriptions": "No active subscriptions",
+    "noSubscriptionsSubtitle": "Browse available funds to start investing.",
+    "browseFunds": "Browse Funds",
+    "invested": "Invested",
+    "summary": "Summary",
+    "totalInvested": "Total Invested",
+    "fundsActive": "Funds Active",
+    "recentTransactions": "Recent Transactions",
+    "viewAll": "View All",
+    "noRecentTransactions": "No recent transactions"
+  },
+  "funds": {
+    "title": "Available Funds",
+    "loading": "Loading funds...",
+    "minimum": "Minimum: {amount}",
+    "subscribed": "Subscribed",
+    "subscribe": "Subscribe",
+    "cancelSubscription": "Cancel Subscription",
+    "insufficientBalance": "Insufficient Balance",
+    "filterAll": "All",
+    "filterByCategory": "Filter by category"
+  },
+  "subscribe": {
+    "title": "Subscribe to Fund",
+    "amountLabel": "Amount to invest",
+    "amountHint": "Enter amount",
+    "availableBalance": "Available balance: {amount}",
+    "notificationMethod": "Notification method",
+    "button": "Subscribe"
+  },
+  "cancel": {
+    "title": "Cancel Subscription",
+    "message": "Are you sure you want to cancel your subscription to {fundName}? The invested amount will be returned to your balance.",
+    "keep": "Keep",
+    "confirm": "Cancel Subscription"
+  },
+  "transactions": {
+    "title": "Transaction History",
+    "empty": "No transactions yet",
+    "emptySubtitle": "Your subscription and cancellation history will appear here."
+  },
+  "transactionType": {
+    "subscription": "Subscription",
+    "cancellation": "Cancellation"
+  },
+  "notificationMethod": {
+    "email": "Email",
+    "sms": "SMS"
+  },
+  "fundCategory": {
+    "fpv": "FPV",
+    "fic": "FIC"
+  },
+  "validators": {
+    "amountRequired": "Amount is required.",
+    "amountInvalid": "Please enter a valid number.",
+    "amountBelowMinimum": "Minimum amount is {amount}.",
+    "amountExceedsBalance": "Insufficient balance. Available: {amount}.",
+    "notificationRequired": "Please select a notification method."
+  },
+  "success": {
+    "subscribed": "Successfully subscribed to {fundName}! Notification will be sent via {method}.",
+    "cancelled": "Subscription to {fundName} cancelled successfully."
+  },
+  "failure": {
+    "insufficientBalance": "Insufficient balance. Available: {amount}.",
+    "minimumAmountNotMet": "The minimum amount for this fund is {amount}.",
+    "alreadySubscribed": "You are already subscribed to this fund.",
+    "notSubscribed": "You are not subscribed to this fund.",
+    "fundNotFound": "Fund with ID {id} not found.",
+    "unexpected": "An unexpected error occurred.",
+    "loadFundsFailed": "Failed to load funds. Please try again.",
+    "loadFundFailed": "Failed to load fund. Please try again.",
+    "savingPreference": "Failed to save preference."
+  },
+  "settings": {
+    "title": "Settings",
+    "appearance": "Appearance",
+    "darkMode": "Dark Mode",
+    "darkModeSubtitle": "Toggle between light and dark theme",
+    "language": "Language",
+    "languageSubtitle": "Select your preferred language",
+    "english": "English",
+    "spanish": "Español",
+    "about": "About",
+    "version": "Version {version}",
+    "appDescription": "BTG Pactual Fund Management Application"
+  },
+  "retry": "Retry"
+}

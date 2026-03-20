@@ -1,0 +1,102 @@
+{
+  "appTitle": "BTG Pactual Fondos",
+  "nav": {
+    "portfolio": "Portafolio",
+    "funds": "Fondos",
+    "transactions": "Transacciones",
+    "settings": "Ajustes"
+  },
+  "portfolio": {
+    "availableBalance": "Saldo Disponible",
+    "mySubscriptions": "Mis Suscripciones",
+    "activeCount": "{count} activas",
+    "noSubscriptions": "No hay suscripciones activas",
+    "noSubscriptionsSubtitle": "Explora los fondos disponibles para comenzar a invertir.",
+    "browseFunds": "Explorar Fondos",
+    "invested": "Invertido",
+    "summary": "Resumen",
+    "totalInvested": "Total Invertido",
+    "fundsActive": "Fondos Activos",
+    "recentTransactions": "Transacciones Recientes",
+    "viewAll": "Ver Todas",
+    "noRecentTransactions": "Sin transacciones recientes"
+  },
+  "funds": {
+    "title": "Fondos Disponibles",
+    "loading": "Cargando fondos...",
+    "minimum": "Mínimo: {amount}",
+    "subscribed": "Suscrito",
+    "subscribe": "Suscribirse",
+    "cancelSubscription": "Cancelar Suscripción",
+    "insufficientBalance": "Saldo Insuficiente",
+    "filterAll": "Todos",
+    "filterByCategory": "Filtrar por categoría"
+  },
+  "subscribe": {
+    "title": "Suscribirse al Fondo",
+    "amountLabel": "Monto a invertir",
+    "amountHint": "Ingrese el monto",
+    "availableBalance": "Saldo disponible: {amount}",
+    "notificationMethod": "Método de notificación",
+    "button": "Suscribirse"
+  },
+  "cancel": {
+    "title": "Cancelar Suscripción",
+    "message": "¿Está seguro de cancelar su suscripción a {fundName}? El monto invertido será devuelto a su saldo.",
+    "keep": "Mantener",
+    "confirm": "Cancelar Suscripción"
+  },
+  "transactions": {
+    "title": "Historial de Transacciones",
+    "empty": "Sin transacciones",
+    "emptySubtitle": "Su historial de suscripciones y cancelaciones aparecerá aquí."
+  },
+  "transactionType": {
+    "subscription": "Suscripción",
+    "cancellation": "Cancelación"
+  },
+  "notificationMethod": {
+    "email": "Email",
+    "sms": "SMS"
+  },
+  "fundCategory": {
+    "fpv": "FPV",
+    "fic": "FIC"
+  },
+  "validators": {
+    "amountRequired": "El monto es obligatorio.",
+    "amountInvalid": "Por favor ingrese un número válido.",
+    "amountBelowMinimum": "El monto mínimo es {amount}.",
+    "amountExceedsBalance": "Saldo insuficiente. Disponible: {amount}.",
+    "notificationRequired": "Por favor seleccione un método de notificación."
+  },
+  "success": {
+    "subscribed": "Suscripción exitosa a {fundName}. Se enviará notificación por {method}.",
+    "cancelled": "Suscripción a {fundName} cancelada exitosamente."
+  },
+  "failure": {
+    "insufficientBalance": "Saldo insuficiente. Disponible: {amount}.",
+    "minimumAmountNotMet": "El monto mínimo para este fondo es {amount}.",
+    "alreadySubscribed": "Ya está suscrito a este fondo.",
+    "notSubscribed": "No está suscrito a este fondo.",
+    "fundNotFound": "Fondo con ID {id} no encontrado.",
+    "unexpected": "Ha ocurrido un error inesperado.",
+    "loadFundsFailed": "Error al cargar los fondos. Intente nuevamente.",
+    "loadFundFailed": "Error al cargar el fondo. Intente nuevamente.",
+    "savingPreference": "Error al guardar la preferencia."
+  },
+  "settings": {
+    "title": "Ajustes",
+    "appearance": "Apariencia",
+    "darkMode": "Modo Oscuro",
+    "darkModeSubtitle": "Alternar entre tema claro y oscuro",
+    "language": "Idioma",
+    "languageSubtitle": "Seleccione su idioma preferido",
+    "english": "English",
+    "spanish": "Español",
+    "about": "Acerca de",
+    "version": "Versión {version}",
+    "appDescription": "Aplicación de Gestión de Fondos BTG Pactual"
+  },
+  "retry": "Reintentar"
+}
