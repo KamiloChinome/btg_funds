@@ -15,20 +15,16 @@ final _settingsKey = GlobalKey<NavigatorState>(debugLabel: 'settings');
 
 /// Application router configuration using GoRouter with typed routes.
 /// Uses [StatefulShellRoute.indexedStack] to provide persistent bottom
-/// navigation across the four main tabs — following the same pattern as Rudel.
+/// navigation across the four main tabs.
 final appRouter = GoRouter(
   initialLocation: const portfolio_router.PortfolioRoute().location,
   routes: [
     // Redirect root to portfolio
-    GoRoute(
-      path: '/',
-      redirect: (_, _) => const portfolio_router.PortfolioRoute().location,
-    ),
+    GoRoute(path: '/', redirect: (_, _) => const portfolio_router.PortfolioRoute().location),
 
     // Bottom navigation shell
     StatefulShellRoute.indexedStack(
-      builder: (context, state, shell) =>
-          MainScaffold(navigationShell: shell),
+      builder: (context, state, shell) => MainScaffold(navigationShell: shell),
       branches: [
         StatefulShellBranch(
           navigatorKey: _portfolioKey,
@@ -42,8 +38,7 @@ final appRouter = GoRouter(
         ),
         StatefulShellBranch(
           navigatorKey: _transactionsKey,
-          initialLocation:
-              const transactions_router.TransactionsRoute().location,
+          initialLocation: const transactions_router.TransactionsRoute().location,
           routes: [transactions_router.$transactionsRoute],
         ),
         StatefulShellBranch(
